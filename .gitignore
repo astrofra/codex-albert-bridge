@@ -1,0 +1,22 @@
+# Never publish local configuration, authentication, or model conversations.
+credentials*
+!credentials.example.json
+.env
+.env.*
+*.key
+*.pem
+*.log
+*.jsonl
+*.pid
+*.lock
+.codex/
+.runtime/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.DS_Store

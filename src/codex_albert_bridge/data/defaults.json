@@ -1,0 +1,9 @@
+{
+  "model": "deepseek-v4-flash-0731",
+  "api_base": "https://albert.api.etalab.gouv.fr/v1",
+  "port": 8417,
+  "context_window": 131072,
+  "max_completion_tokens": 32768,
+  "headroom_tokens": 16384,
+  "profile": "albert-bridge"
+}

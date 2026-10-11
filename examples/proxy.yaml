@@ -1,0 +1,27 @@
+# Reference only. Generate your private configuration with codex-albert configure.
+model_list:
+- model_name: deepseek-v4-flash-0731
+  litellm_params:
+    model: openai/deepseek-v4-flash-0731
+    api_base: https://albert.api.etalab.gouv.fr/v1
+    api_key: os.environ/ALBERT_API_KEY
+    use_chat_completions_api: true
+    max_completion_tokens: 32768
+    drop_params: true
+    additional_drop_params:
+    - service_tier
+    - reasoning_effort
+    - max_tokens
+  model_info:
+    mode: chat
+    max_input_tokens: 131072
+    max_output_tokens: 32768
+    supports_function_calling: true
+    service_tiers: []
+litellm_settings:
+  drop_params: true
+  set_verbose: false
+  turn_off_message_logging: true
+general_settings:
+  master_key: os.environ/ALBERT_GATEWAY_KEY
+  disable_spend_logs: true

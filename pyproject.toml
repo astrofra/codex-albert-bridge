@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-albert-bridge"
+version = "0.1.0"
+description = "A local Responses-to-Chat-Completions gateway for Codex and Albert"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = [
+  "litellm[proxy]==1.104.2",
+  "filelock>=3.16,<4",
+  "psutil>=7,<8",
+  "PyYAML>=6,<7",
+]
+
+[project.scripts]
+codex-albert = "codex_albert_bridge.cli:main"
+
+[tool.setuptools.package-data]
+codex_albert_bridge = ["data/*.json", "data/*.md"]
